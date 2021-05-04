@@ -1,3 +1,5 @@
+from bs4 import BeautifulSoup
+
 def b_soup_immo(html):
     soup = BeautifulSoup(html, 'lxml')
     
