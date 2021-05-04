@@ -1,1 +1,4 @@
 adid, bedrooms, city, price, transaction_type, subtype, zipcode, adresse, surface, type_prop, etat, facades, surface_terrain, garden, garden_surface, terrasse, terrasse_surface, piscine, nombre_chambres, garage, surface_habitable, meuble, salles_de_bain, toilettes, cuisine_equipee, cheminee
+VAR58606,2,La Hestre,160000,Sale,Appartement,7170, Rue de Mariemont 11 1 ,87,Appartment,None,2,None,None,None,Non,None,None,2,Oui,87,Non,1,1,None,None
+RAW65225,2,Tongerlo,249000,Sale,Appartement,2260, Langstraat 2  ,94,Appartment,None,None,None,Oui,60,Oui,32,None,2,Non,94,Non,2,1,Semi-équipée,None
+RAW60035,2,Dadizele,271000,Sale,Appartement,8890, Kleppestraat nb 00.01 ,108,Appartment,None,None,None,Oui,165,Oui,51,None,2,Non,108,None,None,1,Equipée,None

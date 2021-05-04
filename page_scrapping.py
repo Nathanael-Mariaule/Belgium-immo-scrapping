@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
 def b_soup_immo(html):
-    soup = BeautifulSoup(html, 'lxml')
+    soup = BeautifulSoup(html, "html.parser")
     
     adid = soup.find("meta", {"name": "cXenseParse:rob-immo-property-adid"})
     if adid != None:
