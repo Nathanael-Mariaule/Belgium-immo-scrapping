@@ -83,25 +83,25 @@ def b_soup_immo(html):
         elif text == "Jardin":
             garden = element.find_next_sibling().text.strip()
             if garden == "Oui":
-                    garden == 1
-                else:
-                    garden == 0
+                garden == 1
+            else:
+                garden == 0
         elif text == "Surface du jardin":
             garden_surface = element.find_next_sibling().text.strip()[:-3]
         elif text == "Terrasse aménagée":
             terrasse = element.find_next_sibling().text.strip()
             if terrasse == "Oui":
-                    terrasse == 1
-                else:
-                    terrasse == 0
+                terrasse == 1
+            else:
+                terrasse == 0
         elif text == "Surface de la terrasse":
             terrasse_surface = element.find_next_sibling().text.strip()[:-3]
         elif text == "Piscine extérieure":
             piscine = element.find_next_sibling().text.strip()
             if piscine == "Oui":
-                    piscine == 1
-                else:
-                    piscine == 0
+                piscine == 1
+            else:
+                piscine == 0
 
             
     interieur = soup.find("div", {"id":"collapse_indoor_details"}).find_all("div")
@@ -115,15 +115,15 @@ def b_soup_immo(html):
         elif text == "Garage":
             garage = element.find_next_sibling().text.strip()
             if garage == "Oui":
-                    garage == 1
-                else:
-                    garage == 0
+                garage == 1
+            else:
+                garage == 0
         elif text == "Meublé":
             meuble = element.find_next_sibling().text.strip()
             if meuble == "Oui":
-                    meuble == 1
-                else:
-                    meuble == 0
+                meuble == 1
+            else:
+                meuble == 0
     
     sanitaires = soup.find("div", {"id":"collapse_kitchenbath_details"})
     salles_de_bain, toilettes, cuisine_equipee = None, None, None
