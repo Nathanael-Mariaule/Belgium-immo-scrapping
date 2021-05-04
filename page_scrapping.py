@@ -1,4 +1,4 @@
-def BSoupImmo(html):
+def b_soup_immo(html):
     soup = BeautifulSoup(html, 'lxml')
     
     adid = soup.find("meta", {"name": "cXenseParse:rob-immo-property-adid"})
