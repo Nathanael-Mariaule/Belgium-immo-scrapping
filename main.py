@@ -8,6 +8,7 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 import time
 from bs4 import BeautifulSoup
+
 from page_scrapping import b_soup_immo
 
 with open('data.csv', 'w') as file:
@@ -27,9 +28,11 @@ next_page_xpath = "//i[@class='fa fa-angle-right']"
 print('compute number of page')
 my_scrapper.get_number_pages(last_entry_location)
 while True:
-    for html_page in my_scrapper.scrap_page(xpaths):
-        with open('data.csv', 'a') as file:
-            file.write(b_soup_immo(html_page)+"\n")
-    next_page_test = my_scrapper.next_page(next_page_xpath)
-    if not next_page_test:
+    #for html_page in my_scrapper.scrap_page(xpaths):
+    #    with open('data.csv', 'a') as file:
+    #        file.write(b_soup_immo(html_page)+"\n")
+    if not my_scrapper.research_completed:
         break
+    else:
+        my_scrapper.next_page(next_page_xpath)
+my_scrapper.close()

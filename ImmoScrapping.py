@@ -36,7 +36,7 @@ class ImmoScrapping:
         print(self.last, 'page to scrap')
 
     def scrap_page(self, xpaths):
-        print('scrapping page ', self.number_page_scrapped+1)
+        print('scrapping page 1')
         for i in range(self.last):
             elements = []
             for xpath in xpaths:
@@ -58,20 +58,49 @@ class ImmoScrapping:
                 self.driver.switch_to.window(self.driver.window_handles[0])
                 yield source_page
         self.number_page_scrapped += 1
+        print('scrapping page ', self.number_page_scrapped)
 
     def next_page(self, xpath):
-        if self.number_page_scrapped == self.last:
-            return False
+        time.sleep(5)
         current_url = self.driver.current_url
+        print("change page")
+        elem = self.driver.find_element_by_xpath(xpath)
+        actions = ActionChains(self.driver)
+        actions.click(elem)
+        actions.perform()
+        time.sleep(5)
         elem = self.driver.find_element_by_xpath(xpath)
         actions = ActionChains(self.driver)
         actions.click(elem)
         actions.perform()
         WebDriverWait(self.driver, 15).until(EC.url_changes(current_url))
-        return True
+        print("done")
+
+    def next_page2(self, xpath):
+        print('change page')
+        driver = self.driver
+        time.sleep(5)
+        elem = driver.find_element_by_xpath("//i[@class='fa fa-angle-right']")
+        actions = ActionChains(driver)
+        actions.click(elem)
+        actions.perform()
+        time.sleep(5)
+        #elem = driver.find_element_by_xpath("//i[@class='fa fa-angle-right']")
+        #actions = ActionChains(driver)
+        #actions.click(elem)
+        #actions.perform()
+        #time.sleep(5)
+        print('done')
 
 
+    def research_completed(self):
+        return self.number_page_scrapped == self.last
 
+    def close(self):
+        self.driver.quit()
+
+
+#<a data-v-79ce4188="" title="suivant" rel="nofollow" class="page-link"><span data-v-79ce4188=""><i class="fa fa-angle-right"></i></span></a>
 
 
 
@@ -105,14 +134,14 @@ if __name__=='__main__':
     elem.send_keys("8000")
     elem.send_keys(Keys.RETURN)
     time.sleep(7)
-    my_soup=BeautifulSoup(driver.page_source)
+    my_soup=BeautifulSoup(driver.page_source, features="html.parser")
     links = my_soup.find_all('a', attrs = {'rel':'nofollow'})
     last = 0
     for i in range(len(links)):
         if links[i].get('title') == 'suivant':
             last = int(links[i - 1].get_text())
     print(last)
-    for i in range(last):
+    for i in range(2): #range(last):
         xpath_flat = "//h2[@class='card-title text-ellipsis mb-1 d-inline with-small-icon appartment']"
         xpath_house = "//h2[@class='card-title text-ellipsis mb-1 d-inline with-small-icon house']"
         elements_house = driver.find_elements_by_xpath(xpath_house)
@@ -121,7 +150,7 @@ if __name__=='__main__':
         elements = elements_flat + elements_house
 
         print(len(elements))
-        for i in range(len(elements)):
+        for i in range(2): #range(len(elements)):
             elem = elements[i]
             actions = ActionChains(driver)
             actions.move_to_element(elem)
