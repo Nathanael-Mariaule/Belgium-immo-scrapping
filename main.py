@@ -27,12 +27,12 @@ last_entry_location = ('a', {'rel':'nofollow'})
 next_page_xpath = "//i[@class='fa fa-angle-right']"
 print('compute number of page')
 my_scrapper.get_number_pages(last_entry_location)
-while True:
-    #for html_page in my_scrapper.scrap_page(xpaths):
-    #    with open('data.csv', 'a') as file:
-    #        file.write(b_soup_immo(html_page)+"\n")
-    if not my_scrapper.research_completed:
-        break
-    else:
-        my_scrapper.next_page(next_page_xpath)
+
+for html_page in my_scrapper.scrap_page(xpaths, next_page_xpath):
+    with open('data.csv', 'a') as file:
+        file.write(b_soup_immo(html_page)+"\n")
+    #if not my_scrapper.research_completed:
+    #    break
+    #elif my_scrapper.list_complete():
+    #    my_scrapper.next_page(next_page_xpath)
 my_scrapper.close()

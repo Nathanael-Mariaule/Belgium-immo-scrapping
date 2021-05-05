@@ -15,6 +15,7 @@ class ImmoScrapping:
         self.last = 0
         self.number_page_scrapped = 0
         self.driver.get(url)
+        self.change_page = False
         time.sleep(10)
         print('ready')
 
@@ -35,15 +36,18 @@ class ImmoScrapping:
                 self.last = int(links[i - 1].get_text())
         print(self.last, 'page to scrap')
 
-    def scrap_page(self, xpaths):
-        print('scrapping page 1')
+    def scrap_page(self, xpaths, next_page_xpath):
         for i in range(self.last):
+            print('scrapping page ', i + 1)
             elements = []
             for xpath in xpaths:
-                elements_for_xpath = self.driver.find_elements_by_xpath(xpath)
+                wait = WebDriverWait(self.driver, 60)
+                elements_for_xpath = wait.until(EC.presence_of_all_elements_located((By.XPATH, xpath)))
+                #elements_for_xpath = self.driver.find_elements_by_xpath(xpath)
                 elements += elements_for_xpath
-            for i in range(len(elements)):
-                elem = elements[i]
+            print(len(elements), elements)
+            for j in range(len(elements)):
+                elem = elements[j]
                 windows_before = self.driver.window_handles
                 actions = ActionChains(self.driver)
                 actions.move_to_element(elem)
@@ -53,28 +57,29 @@ class ImmoScrapping:
                 WebDriverWait(self.driver, 20).until(EC.new_window_is_opened(windows_before))
                 self.driver.switch_to.window(self.driver.window_handles[1])
                 source_page = self.driver.page_source
-                source_pages_url = self.driver.current_url
                 self.driver.close()
                 self.driver.switch_to.window(self.driver.window_handles[0])
                 yield source_page
-        self.number_page_scrapped += 1
-        print('scrapping page ', self.number_page_scrapped)
+            self.next_page(next_page_xpath)
+            #self.change_page=True
+            #self.number_page_scrapped += 1
+
+    def list_complete(self):
+        return self.change_page
 
     def next_page(self, xpath):
-        time.sleep(5)
         current_url = self.driver.current_url
-        print("change page")
         elem = self.driver.find_element_by_xpath(xpath)
         actions = ActionChains(self.driver)
         actions.click(elem)
         actions.perform()
-        time.sleep(5)
-        elem = self.driver.find_element_by_xpath(xpath)
-        actions = ActionChains(self.driver)
-        actions.click(elem)
-        actions.perform()
+        time.sleep(10)
+        #elem = self.driver.find_element_by_xpath(xpath)
+        #actions = ActionChains(self.driver)
+        #actions.click(elem)
+        #actions.perform()
         WebDriverWait(self.driver, 15).until(EC.url_changes(current_url))
-        print("done")
+        self.change_page=False
 
     def next_page2(self, xpath):
         print('change page')
@@ -148,6 +153,7 @@ if __name__=='__main__':
         elements_flat = driver.find_elements_by_xpath(xpath_flat)
 
         elements = elements_flat + elements_house
+        print(elements)
 
         print(len(elements))
         for i in range(2): #range(len(elements)):
