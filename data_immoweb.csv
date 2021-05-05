@@ -1,3 +1,243 @@
 Surface habitable,Surface du terrain,Chambres,Meublé,Type de cuisine,Surface du jardin,Terrasse,Surface de la terrasse,Nombre de façades,État du bâtiment,Combien de feux ouverts ?,Piscine,Salles de bains,Toilettes,Dressing,Cave,Bureau,Salon,Parkings intérieurs,Parkings extérieurs,Salle à manger,Salles de douche,Buanderie,Année de construction,id,transactionType,type,subtype,zip,price,état
 510,1061,4,Non,Semi-équipée,None,None,None,4,Bon,1,None,2,3,None,Oui,None,None,None,5,None,None,None,1991,9314233,for sale,house,house,9660,425000,good
 254,2330,4,Non,Équipée,None,None,25,2,None,1,None,2,None,None,Oui,None,None,4,2,None,None,None,2008,9243525,for sale,house,house,9660,649000,None
+352,1318,4,Non,Équipée,None,None,None,4,Bon,None,None,2,None,None,None,None,None,None,5,None,None,None,None,8983350,for sale,house,house,9660,385000,good
+4000,6351,5,Non,Équipée,None,None,None,None,Bon,None,None,None,None,None,Oui,None,None,None,None,None,None,None,None,9286819,for sale,house,villa,9660,1250000,good
+145,1231,3,Non,Hyper équipée,None,Oui,None,None,Bon,None,None,None,1,Non,Oui,None,None,None,None,None,None,None,None,9260114,for sale,house,house,9660,279000,good
+400,1849,4,Non,Équipée,None,Oui,None,None,Bon,None,None,None,1,Non,Oui,None,None,None,None,None,None,None,None,9187096,for sale,house,country cottage,9660,340000,good
+210,120,2,Non,Pas équipée,None,None,None,2,À rénover,None,None,1,1,None,Oui,None,None,None,None,None,None,None,None,9143555,for sale,house,house,9660,162000,to renovate
+232,1487,3,Non,None,None,Oui,None,4,Excellent état,None,None,2,2,Non,None,Oui,None,2,None,None,None,None,1980,9158830,for sale,house,house,9660,485000,as new
+172,631,4,None,Équipée,650,None,None,None,À rafraîchir,None,None,1,None,Non,None,Non,None,1,None,None,None,None,1952,9242788,for sale,house,house,9660,275000,to be done up
+146,441,3,None,Hyper équipée,None,None,None,3,Excellent état,None,None,1,2,None,None,None,None,None,None,None,None,None,2020,9137917,for sale,house,house,9660,315000,as new
+300,1471,4,None,Équipée,None,Oui,None,None,Fraîchement rénové,None,None,2,2,Non,Oui,Non,None,None,None,Oui,None,None,1874,9306702,for sale,house,country cottage,9660,450000,just renovated
+134,597,3,None,Équipée,None,None,None,None,Excellent état,None,None,1,1,Non,None,Non,None,None,None,None,None,None,2004,9280388,for sale,house,house,9660,299000,as new
+210,300,3,None,Équipée,None,None,None,2,À rénover,None,None,1,2,None,None,None,None,2,None,None,None,None,1958,9159726,for sale,house,house,9660,245000,to renovate
+189,8487,4,Non,None,None,Oui,None,4,Excellent état,None,None,1,1,Non,None,Oui,None,None,None,None,None,None,None,9093032,for sale,house,country cottage,9660,724000,as new
+189,8487,4,Non,None,None,Oui,None,4,Excellent état,None,None,1,1,Non,None,Oui,None,None,None,None,None,None,None,9093031,for sale,house,villa,9660,724000,as new
+189,8487,4,Non,None,None,Oui,None,4,Excellent état,None,None,1,1,Non,None,Oui,None,None,None,None,None,None,None,9093030,for sale,house,house,9660,724000,as new
+80,526,3,Non,Semi-équipée,380,Oui,None,2,Bon,None,None,1,2,None,Oui,Oui,None,1,4,Oui,None,None,1965,9282869,for sale,house,house,9660,159000,good
+305,550,3,None,None,None,None,None,None,À rénover,None,None,None,2,Non,None,Oui,None,1,None,None,None,Oui,1938,9103200,for sale,house,house,9660,220000,to renovate
+112,353,1,Non,Équipée,None,None,None,None,Excellent état,None,None,1,None,Non,None,Non,None,None,None,Oui,None,None,1936,9230289,for sale,house,house,9660,189000,as new
+182,280,3,None,None,None,None,None,None,À rafraîchir,None,None,1,None,Non,Oui,Non,None,None,None,None,None,None,1934,9176570,for sale,house,house,9660,232000,to be done up
+330,2650,4,Non,None,None,Oui,None,3,À rénover,None,None,1,1,None,Oui,None,Oui,1,None,None,None,None,1930,9284797,for sale,house,house,9660,190000,to renovate
+None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,1,None,None,None,None,None,9164837,for sale,house group,house group,9660,375000 - 385000,None
+438,384,4,Non,Équipée,None,Oui,None,None,À rénover,None,None,1,None,Non,Oui,Non,Oui,None,None,None,None,None,None,9154955,for sale,house,house,9660,239000,to renovate
+175,525,3,Non,None,None,None,None,3,Excellent état,None,None,1,2,Oui,None,None,None,None,None,None,1,None,2021,9286842,for sale,house,house,9660,373750,as new
+181,1327,2,Non,None,None,None,None,None,None,None,None,1,None,Non,None,Oui,None,1,None,None,None,None,1971,9204712,for sale,house,house,9660,305000,None
+None,689,2,Non,None,None,None,None,3,None,None,None,1,None,Non,None,Non,None,1,None,Oui,None,None,None,9239621,for sale,house,house,9660,195000,None
+None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9227107,for sale,house group,house group,9660,298000 - 359000,None
+None,None,3,None,None,None,None,None,3,À rénover,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9216611,for sale,house,house,9660,105000,to renovate
+None,10798,1,None,None,None,None,None,4,None,None,None,None,None,None,None,None,None,None,None,None,None,None,1953,9191021,for sale,house,house,9660,120000,None
+None,1770,4,None,Équipée,None,Oui,None,None,None,None,None,None,None,None,Oui,None,Oui,2,None,Oui,None,None,None,9218737,for sale,house,house,9660,225000,None
+156,338,4,None,None,None,None,None,None,None,None,None,1,1,Non,None,Non,None,1,None,Oui,None,None,None,9085658,for sale,house,house,9660,288000,None
+142,339,3,None,None,None,None,None,None,None,None,None,1,1,Non,None,Non,None,1,None,Oui,None,None,None,9085659,for sale,house,house,9660,291000,None
+154,395,4,None,None,None,None,None,None,None,None,None,1,1,Non,None,Non,None,1,None,Oui,None,None,None,9085660,for sale,house,house,9660,299000,None
+156,392,4,None,None,None,None,None,None,None,None,None,1,1,Non,None,Non,None,1,None,Oui,None,None,None,9022968,for sale,house,house,9660,299000,None
+140,300,3,None,None,None,None,None,None,None,None,None,1,1,Non,None,Non,None,1,None,Oui,None,None,None,9022964,for sale,house,house,9660,275000,None
+156,325,4,None,None,None,None,None,None,None,None,None,1,1,Non,None,Non,None,1,None,Oui,None,None,None,9022961,for sale,house,house,9660,289000,None
+145,375,3,None,None,None,None,None,None,None,None,None,1,1,Non,None,Non,None,1,None,Oui,None,None,None,9022965,for sale,house,house,9660,293000,None
+154,313,3,None,None,None,None,None,None,None,None,None,1,1,Non,None,Non,None,1,None,Oui,None,None,None,9022967,for sale,house,house,9660,291000,None
+None,289,3,None,None,None,Oui,None,None,None,None,None,1,2,Non,None,Non,None,1,None,Oui,None,None,None,9164839,for sale,house,house,9660,375000,None
+140,300,3,None,None,None,None,None,None,None,None,None,1,1,Non,None,Non,None,1,None,Oui,None,None,None,9022963,for sale,house,house,9660,275000,None
+None,2091,4,None,None,None,None,None,4,None,None,None,1,None,Non,None,Non,None,1,None,None,None,None,None,9096675,for sale,house,house,9660,378311,None
+281,250,3,None,Américaine hyper-équipée,None,None,None,2,None,None,None,2,2,None,None,None,Oui,None,None,None,1,None,None,9219981,for sale,house,house,9660,265600,None
+None,330,3,None,None,None,Oui,None,None,None,None,None,1,2,Non,None,Non,None,1,None,Oui,None,None,None,9164842,for sale,house,house,9660,385000,None
+None,None,3,None,None,None,None,None,None,None,None,None,1,None,Oui,None,Non,Oui,None,None,None,None,None,None,9063437,for sale,house,house,9660,310000,None
+None,None,3,None,None,None,None,None,None,None,None,None,1,None,Oui,None,Non,Oui,None,None,None,None,None,None,9061283,for sale,house,house,9660,310000,None
+175,280,3,None,None,180,None,20,2,À rénover,None,None,None,1,None,None,None,None,None,None,None,1,Oui,1940,9269342,for sale,house,house,9660,179000,to renovate
+None,350,3,None,None,None,None,26,3,Excellent état,None,None,1,2,None,None,None,None,1,3,None,1,None,2020,8946557,for sale,house,house,9660,308000,as new
+None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9035745,for sale,house group,house group,9660,275000 - 299000,None
+None,356,3,Non,None,None,None,None,None,None,None,None,None,None,Non,None,Non,None,None,None,None,None,None,None,9088550,for sale,house,house,9660,271595,None
+None,850,None,None,None,755,None,None,4,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9308519,for sale,house,villa,9660,430000,None
+182,476,3,None,None,None,None,None,3,None,None,None,None,2,None,None,Oui,Oui,None,None,None,None,None,None,9062594,for sale,house,house,9660,326871,None
+176,1590,5,None,None,None,None,None,3,None,None,None,None,1,None,None,Oui,Oui,None,None,None,None,None,None,9103052,for sale,house,house,9660,352699,None
+187,650,3,None,None,None,None,None,3,None,None,None,None,1,None,None,Oui,Oui,None,None,None,None,None,None,9226871,for sale,house,house,9660,361477,None
+None,None,3,None,None,None,Oui,None,None,None,None,None,1,1,Non,None,Non,None,None,None,None,None,None,None,9256700,for sale,house,house,9660,373750,None
+238,2091,2,None,None,None,None,None,4,None,None,None,None,2,None,None,None,Oui,None,None,None,None,None,None,9226870,for sale,house,house,9660,502423,None
+171,1124,4,None,None,None,None,None,4,None,None,None,None,2,None,None,None,Oui,1,None,None,None,None,None,9083563,for sale,house,house,9660,370457,None
+None,197,3,None,Hyper équipée,100,None,10,2,Excellent état,1,None,None,1,None,None,None,None,None,None,None,1,None,1936,9136928,for sale,house,house,9660,258000,as new
+185,239,3,Non,Semi-équipée,140,None,20,2,À rénover,None,None,1,1,None,None,None,None,None,None,Oui,None,Oui,1952,8983422,for sale,house,house,9660,149800,to renovate
+250,630,3,Non,None,None,None,None,4,Bon,None,None,1,1,None,Oui,None,None,1,None,None,None,None,None,9243805,for sale,house,house,9660,225000,good
+None,643,8,Non,Équipée,None,None,40,2,None,None,None,3,None,Non,None,Non,Oui,1,None,None,None,None,1968,9311041,for sale,house,apartment block,9660,645000,None
+230,155,2,Non,Hyper équipée,None,None,None,2,À rafraîchir,None,None,1,None,None,Oui,None,Oui,None,None,Oui,None,None,None,9156807,for sale,house,house,9660,169000,to be done up
+204,523,3,None,Équipée,None,None,None,None,À rénover,None,None,1,1,Non,Oui,Non,Oui,None,None,None,None,None,None,9176575,for sale,house,house,9660,235000,to renovate
+None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,8640058,for sale,house group,house group,9660,373542 - 397960,None
+None,4330,4,None,Équipée,None,Oui,None,4,Bon,None,None,None,2,None,None,None,None,2,4,None,None,None,None,9126060,for sale,house,house,9660,375000,good
+None,1847,3,Non,Hyper équipée,None,None,None,3,À rafraîchir,None,None,1,2,None,Oui,Oui,None,4,4,None,None,None,1838,9313781,for sale,house,country cottage,9660,395000,to be done up
+None,75,2,None,Équipée,None,None,None,2,Bon,None,None,1,None,None,Oui,None,Oui,None,None,Oui,None,None,1938,9239496,for sale,house,house,9660,159000,good
+159,459,3,None,None,None,None,None,4,À rénover,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9265778,for sale,house,house,9660,239000,to renovate
+200,921,3,Non,None,None,None,None,None,À rafraîchir,None,None,1,None,Non,None,Non,None,None,None,Oui,None,Oui,None,9161093,for sale,house,house,9660,255000,to be done up
+None,395,3,Non,Équipée,None,None,None,4,Excellent état,None,None,1,2,Non,None,Non,None,None,None,None,None,None,2021,8658939,for sale,house,house,9660,253310,as new
+167,466,3,None,None,None,None,None,3,None,None,None,1,2,None,None,None,None,None,None,None,None,Oui,2019,8565189,for sale,house,house,9660,315297,None
+None,400,3,None,None,None,None,None,3,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9295528,for sale,house,house,9660,249000,None
+None,1348,3,None,None,None,None,None,None,Bon,None,None,None,None,Non,None,Non,None,None,None,None,None,None,2018,9139378,for sale,house,house,9660,256364,good
+None,325,3,None,None,None,None,None,3,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9295395,for sale,house,house,9660,276000,None
+200,447,3,Non,Semi-équipée,300,None,None,3,Fraîchement rénové,1,None,1,2,None,None,None,None,1,1,None,None,Oui,1977,9249928,for sale,house,house,2830,420000,just renovated
+185,272,4,Non,Équipée,None,None,30,3,Bon,None,None,1,2,None,None,None,None,2,2,None,None,None,2012,9209594,for sale,house,house,2830,405000,good
+660,2200,3,Non,Semi-équipée,1,None,60,4,À rénover,None,None,1,2,Oui,None,Oui,None,3,9,Oui,1,None,1956,9298425,for sale,house,villa,2830,560000,to renovate
+170,969,5,Non,Semi-équipée,255,None,None,4,À rénover,None,None,1,2,None,Oui,None,None,1,None,None,None,None,1979,9292422,for sale,house,house,2830,497000,to renovate
+171,310,3,Non,Semi-équipée,51,None,11,3,À rafraîchir,None,None,1,2,None,Oui,None,None,1,None,None,None,None,1974,9265005,for sale,house,house,2830,318000,to be done up
+150,598,3,Non,Semi-équipée,280,None,30,4,Bon,None,None,1,2,None,None,Oui,None,1,None,None,None,None,1978,9220612,for sale,house,house,2830,385000,good
+216,752,4,Non,Équipée,None,None,None,4,Bon,None,None,1,2,None,None,None,None,1,None,None,None,None,2005,9208084,for sale,house,house,2830,649000,good
+106,958,1,Non,Équipée,None,None,None,3,À rénover,None,None,1,None,None,None,None,None,1,1,None,None,None,1850,9219771,for sale,house,house,2830,249000,to renovate
+222,None,3,Non,Équipée,None,None,5,2,Bon,None,None,1,2,None,None,None,None,None,None,Oui,None,None,1969,8095309,for sale,house,house,2830,499000,good
+222,None,3,Non,Équipée,None,None,5,2,Bon,None,None,1,2,None,None,None,None,None,None,Oui,None,None,1969,8095308,for sale,house,mixed use building,2830,499000,good
+516,225,9,Non,Semi-équipée,None,None,None,3,À rénover,None,None,1,None,None,Oui,None,None,None,4,None,None,None,1905,9120384,for sale,house,house,2830,499000,to renovate
+215,310,4,Non,Équipée,None,None,None,2,None,None,None,1,2,None,Oui,None,None,None,2,Oui,None,None,1932,9308486,for sale,house,house,2830,324000,None
+None,295,None,Non,Semi-équipée,None,None,None,2,Bon,None,None,None,None,None,None,None,None,3,None,None,None,None,1972,8664756,for sale,house,apartment block,2830,600000,good
+105,274,3,Non,Hyper équipée,None,Oui,None,None,Excellent état,None,None,None,2,Non,None,None,None,None,None,None,None,None,None,9311719,for sale,house,house,2830,259900,as new
+134,250,3,Non,None,75,None,None,3,None,None,None,1,1,None,Oui,None,None,None,2,None,None,None,None,6872888,for sale,house,house,2830,275000,None
+134,250,3,Non,None,75,None,None,3,None,None,None,1,1,None,Oui,None,None,None,2,None,None,None,None,6872887,for sale,house,apartment block,2830,275000,None
+208,194,4,Non,Semi-équipée,None,Oui,None,2,À rénover,None,None,1,2,None,Oui,None,None,3,None,None,None,None,1957,9212778,for sale,house,house,2830,325000,to renovate
+None,None,3,Non,Équipée,None,None,None,4,Bon,1,None,1,2,None,None,None,None,2,None,None,None,None,1990,9301610,for sale,house,house,2830,545000,good
+190,2790,4,Non,None,None,Oui,None,4,À rénover,None,None,2,None,None,None,None,None,3,8,None,None,None,1964,9282759,for sale,house,house,2830,475000,to renovate
+135,397,3,Non,Équipée,None,None,None,3,Excellent état,None,None,1,2,Non,None,Non,Oui,1,3,None,None,None,2014,9000025,for sale,house,house,2830,399000,as new
+None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,8884646,for sale,house group,house group,2830,301615 - 301615,None
+None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,7198518,for sale,house group,house group,2830,305381 - 326198,None
+130,190,3,Non,Équipée,None,None,None,2,Bon,None,None,1,2,Non,None,Non,None,1,2,Oui,None,Oui,1974,9224065,for sale,house,house,2830,289000,good
+75,155,2,Non,Équipée,105,None,None,2,Excellent état,None,None,1,2,Non,None,Non,None,None,None,None,None,None,1899,9244328,for sale,house,house,2830,295000,as new
+None,None,1,Non,Équipée,None,None,25,2,Bon,1,None,1,None,None,None,Oui,None,1,None,None,None,None,2010,9177639,for sale,house,house,2830,395000,good
+190,142,2,None,Américaine équipée,None,Oui,None,2,None,None,None,1,2,None,None,Oui,None,1,1,None,None,None,1912,9280595,for sale,house,house,2830,325000,None
+142,72,1,Non,None,None,None,None,2,None,None,None,1,1,None,None,None,None,None,None,None,None,None,None,9063152,for sale,house,mixed use building,2830,240000,None
+None,None,3,Non,Semi-équipée,None,Oui,None,None,À rénover,None,None,None,1,None,None,None,None,None,None,None,1,None,None,9246285,for sale,house,house,2830,250000,to renovate
+153,218,3,Non,Pas équipée,None,None,24,3,None,None,None,1,2,None,None,None,None,1,None,None,None,None,2021,9305869,for sale,house,house,2830,275200,None
+153,218,3,Non,Pas équipée,None,None,24,3,None,None,None,1,2,None,None,None,None,1,None,None,None,None,2021,9305868,for sale,house,house,2830,275200,None
+147,303,3,Non,Pas équipée,None,None,25,3,None,None,None,1,2,None,None,None,None,1,None,None,None,None,2021,9305866,for sale,house,house,2830,292600,None
+147,302,3,Non,Pas équipée,None,None,25,3,None,None,None,1,2,None,None,None,None,1,None,None,None,None,2021,9305867,for sale,house,house,2830,296450,None
+None,345,2,None,None,None,None,None,3,À rénover,None,None,None,None,None,None,None,None,None,None,None,None,None,1957,9274627,for sale,house,house,2830,120000,to renovate
+None,134,2,None,None,None,None,None,2,À rénover,None,None,None,None,None,None,None,None,None,None,None,None,None,1957,9275573,for sale,house,house,2830,116000,to renovate
+None,208,3,None,None,None,None,None,2,À rénover,None,None,1,None,None,None,None,None,1,None,None,None,None,1957,9260825,for sale,house,house,2830,120000,to renovate
+240,None,5,Non,Équipée,285,None,None,2,None,None,None,1,None,Non,None,Non,None,None,None,None,None,None,1949,8961803,for sale,house,house,2830,409000,None
+None,355,3,None,None,None,Oui,None,None,À rénover,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9260030,for sale,house,house,2830,180000,to renovate
+155,159,3,None,None,None,None,None,None,None,None,None,1,None,Non,None,Non,None,None,None,None,None,None,None,9210812,for sale,house,house,2830,265000,None
+None,246,2,None,None,None,None,None,3,None,None,None,1,1,None,None,None,Oui,1,None,Oui,None,None,None,9238759,for sale,house,house,2830,195000,None
+None,351,3,None,None,None,Oui,None,None,À rénover,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9260029,for sale,house,house,2830,185000,to renovate
+None,147,3,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,1932,9244042,for sale,house,house,2830,70000,None
+168,None,3,None,None,None,Oui,None,None,Excellent état,None,None,1,2,Non,None,Non,Oui,1,None,None,None,None,2018,8758205,for sale,house,house,2830,310000,as new
+None,335,9,None,None,None,None,None,None,None,None,None,3,None,None,None,None,None,None,None,None,None,None,None,9124966,for sale,house,apartment block,2830,235000,None
+114,85,3,Non,Équipée,None,None,40,2,Bon,None,None,1,1,None,None,None,None,None,None,None,None,None,1885,9286954,for sale,house,house,2830,289000,good
+120,160,3,Non,Semi-équipée,None,None,None,2,Bon,None,None,1,2,None,None,None,None,None,None,None,None,None,None,9127825,for sale,house,house,2830,265000,good
+160,650,3,None,Équipée,530,Oui,None,3,Fraîchement rénové,None,None,1,2,None,None,None,Oui,None,None,Oui,None,None,1960,9280868,for sale,house,house,2830,420000,just renovated
+140,195,3,Non,Équipée,80,None,None,2,À rénover,None,None,1,None,Non,None,Non,None,None,None,Oui,None,None,None,9236305,for sale,house,house,2830,259000,to renovate
+155,416,4,Non,Hyper équipée,None,None,16,3,Excellent état,None,None,1,2,None,None,None,None,None,1,None,1,None,2021,9300806,for sale,house,house,2830,460000,as new
+231,243,3,Non,Équipée,None,Oui,None,2,None,None,None,1,None,None,Oui,Non,None,None,None,None,None,None,1892,9229134,for sale,house,mansion,2830,469000,None
+73,73,2,Non,Semi-équipée,None,None,9,2,Bon,None,None,1,1,Non,None,Non,None,None,None,None,None,None,1949,9317599,for sale,house,house,2830,229000,good
+130,342,3,Non,Équipée,270,None,14,3,À rénover,None,None,1,1,None,None,Non,None,1,2,None,None,Oui,1955,9317477,for sale,house,house,2830,269000,to renovate
+120,119,3,None,Équipée,None,None,9636,4,None,None,None,1,1,None,Oui,None,None,None,None,Oui,1,None,None,9240713,for sale,house,house,2830,239000,None
+159,233,3,Non,None,None,Oui,None,3,None,None,None,1,2,None,None,None,None,1,None,None,None,None,2020,9295230,for sale,house,house,2830,319500,None
+158,233,3,Non,None,None,Oui,None,3,None,None,None,1,2,None,None,None,None,1,None,None,None,None,2020,9295229,for sale,house,house,2830,319500,None
+142,241,3,Non,Américaine hyper-équipée,None,Oui,None,3,None,None,None,1,2,None,None,None,None,None,1,None,None,None,2020,9295228,for sale,house,house,2830,299500,None
+161,241,3,Non,Américaine hyper-équipée,None,Oui,None,3,None,None,None,1,2,None,None,None,None,None,1,None,None,None,2020,9287484,for sale,house,house,2830,335000,None
+None,1000,4,None,Équipée,None,None,None,4,Excellent état,1,None,1,2,Oui,None,None,None,2,2,Oui,1,None,2000,9281937,for sale,house,villa,2830,645000,as new
+152,282,3,None,None,185,None,13,2,None,None,None,1,None,None,None,None,None,1,None,None,None,None,None,9295232,for sale,house,house,2830,336000,None
+159,228,3,Non,None,None,Oui,None,3,None,None,None,1,2,None,None,None,None,1,None,None,None,None,2020,9295227,for sale,house,house,2830,312000,None
+None,109,3,None,None,None,None,None,3,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9199623,for sale,house,house,2830,319500,None
+151,268,3,None,None,173,None,13,2,None,None,None,1,None,None,None,None,None,1,None,None,None,None,None,9295233,for sale,house,house,2830,332000,None
+73,100,2,Non,Pas équipée,18,None,None,2,Fraîchement rénové,None,None,None,2,None,None,None,None,None,None,Oui,1,None,1940,9286702,for sale,house,house,2830,189000,just renovated
+130,207,3,Non,Semi-équipée,None,None,19,2,Bon,None,None,1,1,None,Oui,None,None,1,2,None,None,None,1955,9186961,for sale,house,house,2830,259000,good
+180,204,4,Non,Semi-équipée,None,None,None,None,Bon,None,None,1,1,None,Oui,None,None,2,3,None,None,None,1955,9186962,for sale,house,house,2830,265000,good
+110,700,2,Non,Semi-équipée,500,Oui,None,2,Bon,None,None,1,1,None,Oui,None,None,1,4,Oui,1,None,1950,9181108,for sale,house,house,2830,279000,good
+161,308,3,Non,None,None,None,18,3,Bon,None,None,1,None,None,None,None,None,None,None,None,None,None,1930,9271783,for sale,house,house,2830,370000,good
+128,150,4,Non,Équipée,None,None,None,2,Bon,None,None,1,2,None,Oui,None,None,None,None,None,None,None,None,9294906,for sale,house,house,2830,239000,good
+120,130,3,None,Équipée,None,None,None,2,Bon,None,None,1,2,None,None,None,None,None,None,None,None,Oui,1978,9265653,for sale,house,house,2830,239000,good
+84,135,2,Non,Semi-équipée,None,Oui,None,None,Bon,None,None,None,2,Non,Oui,None,None,None,None,None,None,None,None,9260624,for sale,house,house,2830,259000,good
+176,375,3,Non,Semi-équipée,None,Oui,None,None,À rafraîchir,None,None,None,1,Non,Oui,None,None,None,None,None,None,None,None,9168290,for sale,house,house,2830,295000,to be done up
+148,599,3,Non,Semi-équipée,None,Oui,None,None,À rénover,None,None,None,1,Non,Oui,None,None,None,None,None,None,None,None,9255142,for sale,house,house,2830,315000,to renovate
+100,54,2,Non,Équipée,None,None,None,2,À rafraîchir,None,None,1,2,None,Oui,None,None,None,None,Oui,None,None,1950,9147704,for sale,house,house,2830,209000,to be done up
+142,110,4,None,Hyper équipée,None,None,None,2,Bon,1,None,1,1,None,Oui,None,None,None,None,None,1,Oui,1936,9264146,for sale,house,house,2830,289000,good
+115,90,3,Non,Équipée,35,None,None,2,À rafraîchir,None,None,1,1,Non,None,Non,Oui,None,None,None,None,None,1918,9201421,for sale,house,house,2830,219000,to be done up
+250,215,4,None,Américaine hyper-équipée,None,Oui,None,2,Fraîchement rénové,None,None,1,3,None,None,Oui,None,1,None,Oui,None,None,None,9279665,for sale,house,house,2830,429000,just renovated
+213,227,5,Non,Équipée,80,None,27,3,None,None,None,2,3,None,None,None,None,1,None,None,None,None,None,9210420,for sale,house,house,2830,349000,None
+None,114,2,None,Américaine hyper-équipée,45,Oui,None,2,Fraîchement rénové,None,None,1,2,None,Oui,None,None,None,None,Oui,1,None,1936,9303122,for sale,house,house,2830,289000,just renovated
+None,131,3,None,Équipée,40,Oui,None,2,Bon,None,None,1,2,None,None,None,None,None,None,None,None,None,None,9217721,for sale,house,house,2830,295000,good
+None,136,3,None,Hyper équipée,40,Oui,None,2,Excellent état,None,None,1,1,None,None,None,None,None,None,None,None,None,None,9286181,for sale,house,house,2830,298000,as new
+70,110,3,Non,None,None,None,None,None,Excellent état,None,None,1,1,Non,None,Non,None,None,None,None,None,None,None,9284230,for sale,house,house,2830,199000,as new
+130,121,3,None,None,40,None,None,2,Bon,None,None,1,1,None,Oui,None,None,None,None,None,None,None,None,9247026,for sale,house,house,2830,249000,good
+517,608,5,None,Hyper équipée,None,Oui,None,4,Excellent état,None,None,3,4,None,Oui,Oui,None,1,1,Oui,None,None,2021,9140518,for sale,house,villa,2830,1368000,as new
+None,None,3,Non,Équipée,None,Oui,None,2,Bon,None,None,1,1,None,Oui,None,None,1,None,None,None,None,None,9272782,for sale,house,house,2830,264000,good
+None,118,3,Non,None,45,None,19,2,Excellent état,None,None,1,1,None,Oui,None,None,None,None,Oui,None,None,None,9289519,for sale,house,house,2830,307500,as new
+432,794,4,None,Hyper équipée,None,Oui,None,4,Excellent état,None,None,4,5,None,Oui,None,None,None,1,Oui,None,None,2021,9150648,for sale,house,villa,2830,1259000,as new
+None,170,4,Non,None,None,Oui,None,2,À rénover,None,None,1,1,None,None,None,None,None,1,None,None,None,None,9279261,for sale,house,house,2830,229000,to renovate
+None,172,3,Non,None,None,None,None,2,À rafraîchir,None,None,1,1,Non,None,Non,None,None,None,None,None,None,1918,9254552,for sale,house,house,2830,295000,to be done up
+None,None,4,None,None,None,None,None,2,À rafraîchir,None,None,1,1,None,None,None,None,None,None,None,None,None,None,9146664,for sale,house,house,2830,269000,to be done up
+384,817,8,None,None,None,None,None,4,Excellent état,1,None,1,None,None,Oui,None,None,1,6,None,None,None,None,9167843,for sale,house,villa,2830,945000,as new
+None,319,3,None,None,None,None,None,3,À rénover,None,None,None,None,None,None,None,None,None,None,None,None,None,1938,9062261,for sale,house,house,2830,245000,to renovate
+None,761,3,None,None,None,None,None,2,Excellent état,None,None,1,1,None,None,Oui,None,None,None,None,None,None,None,9181388,for sale,house,mixed use building,2830,250000,as new
+None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9163650,for sale,house group,house group,2830,319500 - 319500,None
+153,218,3,None,None,65,Oui,None,2,Excellent état,None,None,1,2,None,None,None,None,1,None,None,1,None,None,9018833,for sale,house,house,2830,275200,as new
+147,302,3,None,None,154,Oui,None,3,Excellent état,None,None,1,2,None,None,None,None,1,None,None,1,None,None,9018831,for sale,house,house,2830,296450,as new
+153,218,3,None,None,65,None,None,2,Excellent état,None,None,1,None,None,None,None,None,1,None,None,None,None,None,9018832,for sale,house,house,2830,275200,as new
+None,1368,3,Non,Hyper équipée,None,None,None,None,Excellent état,None,None,None,2,Non,None,None,None,None,None,None,None,None,None,9317298,for sale,house,house,2830,416800,as new
+147,303,3,None,None,143,Oui,None,3,None,None,None,1,2,None,None,None,None,1,None,None,1,None,None,9018834,for sale,house,house,2830,292600,None
+None,291,5,None,None,None,Oui,None,2,None,None,None,1,None,None,None,None,None,1,1,None,None,None,None,9069088,for sale,house,house,2830,307000,None
+None,291,5,None,None,None,Oui,None,2,None,None,None,1,None,None,None,None,None,1,1,None,None,None,None,9069089,for sale,house,house,2830,380000,None
+None,109,3,None,None,None,None,None,3,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9161674,for sale,house,house,2830,319500,None
+75,60,2,Non,Équipée,None,Oui,None,2,Bon,None,None,None,None,None,None,None,None,None,None,None,1,None,None,9238428,for sale,house,house,9230,179000,good
+260,725,4,Non,Semi-équipée,None,Oui,None,None,Bon,None,None,None,2,Non,Oui,None,None,None,None,None,None,None,None,9246225,for sale,house,house,9230,410000,good
+228,624,3,Non,None,None,None,44,2,Excellent état,None,None,1,2,Non,None,Non,None,1,None,None,None,None,1973,9268311,for sale,house,house,9230,472500,as new
+300,1037,4,Non,Équipée,887,None,15,4,Bon,1,None,2,2,Oui,Oui,None,None,1,2,Oui,1,Oui,1980,9283053,for sale,house,villa,9230,550000,good
+162,178,3,Non,Équipée,97,None,None,2,Excellent état,None,None,None,2,None,None,Non,None,1,None,None,None,None,2020,9311663,for sale,house,house,9230,329900,as new
+282,1527,3,Non,Équipée,1527,None,None,4,Bon,None,None,2,3,Non,None,Non,None,1,4,None,2,Oui,1995,9268321,for sale,house,villa,9230,575000,good
+144,110,1,Non,None,None,Oui,None,2,Bon,None,None,2,2,None,None,Non,Oui,None,None,None,None,None,1874,9258765,for sale,house,house,9230,269000,good
+166,189,3,Non,Équipée,106,Oui,None,3,Excellent état,None,None,1,2,None,None,Non,None,1,None,None,1,None,2020,9252104,for sale,house,house,9230,349000,as new
+145,592,3,None,None,None,None,None,None,Excellent état,None,None,1,2,Non,Oui,Oui,Oui,1,None,None,None,None,1962,9273825,for sale,house,house,9230,359000,as new
+116,871,2,Non,Équipée,None,None,5,2,Excellent état,None,None,1,1,None,None,None,None,None,1,None,1,None,2021,9181102,for sale,house,town house,9230,235000,as new
+None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,8878353,for sale,house group,house group,9230,254945 - 261945,None
+98,215,2,None,Américaine semi-équipée,None,None,None,2,À rafraîchir,None,None,1,1,None,None,None,None,None,2,None,None,None,None,9131744,for sale,house,house,9230,185000,to be done up
+239,260,5,None,Semi-équipée,None,Oui,None,2,À rafraîchir,None,None,2,2,None,None,None,None,None,None,None,2,None,None,9024866,for sale,house,house,9230,199000,to be done up
+109,119,3,None,Américaine équipée,None,Oui,None,2,Bon,None,None,1,1,None,None,None,Oui,None,None,None,None,None,None,9208970,for sale,house,house,9230,235000,good
+None,498,3,None,Américaine équipée,None,Oui,None,4,Bon,None,None,1,2,None,None,None,None,1,3,None,None,None,1969,9282865,for sale,house,bungalow,9230,438500,good
+155,1032,3,None,Hyper équipée,450,Oui,None,4,Excellent état,None,None,1,2,None,None,None,None,2,5,None,None,None,1981,9316538,for sale,house,bungalow,9230,368000,as new
+None,90,2,Non,None,7,None,None,None,None,None,None,1,1,Non,None,Non,None,None,None,None,None,None,1951,9130790,for sale,house,house,9230,200000,None
+609,None,6,None,Équipée,None,Oui,None,2,None,None,None,2,4,None,Oui,Oui,None,1,None,None,None,None,None,9272888,for sale,house,mansion,9230,585000,None
+None,None,2,None,Hyper équipée,None,None,None,None,Excellent état,None,None,1,2,Oui,Oui,Non,None,None,None,Oui,None,None,None,9300397,for sale,house,house,9230,335000,as new
+None,None,2,Non,Équipée,None,None,None,2,Excellent état,None,None,2,2,Non,None,Non,Oui,None,None,None,None,None,None,9294558,for sale,house,mixed use building,9230,275000,as new
+None,1107,3,None,Équipée,None,Oui,None,None,None,None,None,1,None,None,None,Oui,Oui,2,None,None,1,None,None,9233193,for sale,house,house,9230,275000,None
+None,504,3,None,Hyper équipée,None,None,None,3,None,None,None,1,2,Oui,None,None,None,None,None,None,1,None,2021,9104095,for sale,house,house,9230,417569,None
+None,None,3,None,Pas équipée,None,Oui,None,3,À rafraîchir,None,None,1,1,None,None,None,None,1,1,None,None,None,None,9240744,for sale,house,house,9230,219000,to be done up
+175,127,4,None,None,None,Oui,None,2,None,None,None,1,1,None,Oui,None,None,None,None,None,1,None,None,9245132,for sale,house,house,9230,219800,None
+152,None,3,Non,Équipée,None,None,None,None,None,None,None,1,1,None,None,Non,None,None,None,None,None,None,None,7439902,for sale,house,house,9230,328400,None
+None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,7267341,for sale,house group,house group,9230,328400 - 357000,None
+80,40,2,None,Équipée,4,None,None,2,Fraîchement rénové,None,None,1,2,None,None,None,None,None,None,None,None,None,1960,9274986,for sale,house,house,9230,199000,just renovated
+100,57,2,None,Équipée,None,None,6,1,Excellent état,None,None,1,1,None,None,None,None,None,None,None,1,None,1938,9274145,for sale,house,house,9230,225000,as new
+180,None,4,None,Équipée,None,None,90,2,Excellent état,1,None,1,3,None,None,None,None,2,None,None,1,Oui,1994,9218502,for sale,house,house,9230,386500,as new
+None,505,3,Non,None,None,None,None,None,None,None,None,None,None,Non,None,Non,None,None,None,None,None,None,None,9290421,for sale,house,house,9230,352075,None
+126,126,3,None,None,68,None,13,None,None,None,None,2,1,Non,None,Non,Oui,None,None,Oui,None,Oui,2020,9219553,for sale,house,house,9230,326000,None
+126,126,3,None,None,70,None,13,None,None,None,None,2,1,Non,None,Non,Oui,None,None,Oui,None,Oui,2020,9219554,for sale,house,house,9230,329000,None
+126,126,3,None,None,78,None,13,None,None,None,None,2,1,Non,None,Non,Oui,None,None,Oui,None,Oui,2020,9219552,for sale,house,house,9230,335000,None
+93,None,2,None,None,None,None,17,None,None,None,None,1,None,Non,None,Non,Oui,None,None,None,None,None,None,9234706,for sale,house,house,9230,419000,None
+None,315,3,None,None,None,Oui,None,None,None,None,None,2,2,Oui,None,Oui,None,None,None,None,None,None,2021,9168653,for sale,house,house,9230,325000,None
+180,202,4,Oui,Équipée,None,None,90,2,Excellent état,1,None,1,3,None,None,Oui,None,2,None,None,1,Oui,1994,9110435,for sale,house,house,9230,386500,as new
+90,60,2,None,Équipée,None,None,None,2,Excellent état,None,None,1,1,None,None,None,None,None,None,None,1,None,1930,9274769,for sale,house,house,9230,160000,as new
+105,107,2,None,Équipée,48,None,8,2,Fraîchement rénové,None,None,1,2,None,None,None,None,None,None,Oui,None,None,None,9251964,for sale,house,house,9230,238000,just renovated
+96,50,3,Non,Hyper équipée,None,None,None,2,Bon,None,None,1,1,None,None,None,None,None,None,None,None,None,None,9293134,for sale,house,house,9230,180000,good
+None,264,2,Non,Pas équipée,None,Oui,None,3,À rénover,1,None,2,2,None,Oui,None,Oui,2,2,Oui,1,None,1932,9105197,for sale,house,house,9230,199000,to renovate
+136,150,3,Non,Équipée,None,Oui,None,2,À rafraîchir,None,None,None,1,None,None,None,None,None,None,None,None,None,None,9299908,for sale,house,house,9230,175000,to be done up
+136,553,2,Non,None,None,None,None,3,Bon,None,None,None,None,None,None,Non,None,1,3,None,None,None,1959,8951761,for sale,house,bungalow,9230,275000,good
+None,666,4,Non,Équipée,None,Oui,None,3,None,4,None,3,3,None,Oui,Oui,Oui,None,None,Oui,1,Oui,1976,9267451,for sale,house,house,9230,395000,None
+None,466,3,Non,Pas équipée,None,None,None,3,Excellent état,None,None,None,2,Non,None,Non,Oui,None,None,None,None,None,2020,9242313,for sale,house,house,9230,550000,as new
+176,2932,3,Non,None,None,None,None,4,Bon,None,None,None,None,None,None,Non,Oui,2,3,None,None,None,1967,9187832,for sale,house,bungalow,9230,595000,good
+None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9210624,for sale,house group,house group,9230,309000 - 340000,None
+124,100,4,None,Équipée,None,Oui,None,None,Excellent état,None,None,1,1,Non,None,Non,None,None,None,None,None,None,None,9290507,for sale,house,house,9230,195000,as new
+208,90,3,None,Équipée,None,Oui,None,None,Excellent état,None,None,1,2,Non,None,Non,None,None,None,None,None,Oui,None,9290511,for sale,house,house,9230,279000,as new
+96,135,3,None,Équipée,None,Oui,None,2,None,None,None,None,None,None,None,None,None,None,None,None,None,None,1964,9189441,for sale,house,house,9230,200000,None
+184,280,3,None,None,None,Oui,None,2,À rénover,None,None,1,2,None,Oui,Oui,Oui,1,None,Oui,None,None,None,8986514,for sale,house,mansion,9230,365000,to renovate
+329,231,3,None,None,None,Oui,None,None,À rénover,None,None,1,1,Non,None,Oui,None,None,None,None,None,None,1955,9214635,for sale,house,house,9230,230000,to renovate
+156,130,4,None,Équipée,None,Oui,None,None,Excellent état,None,None,1,2,Non,None,Non,None,None,None,None,None,None,None,9276298,for sale,house,house,9230,290000,as new
+157,729,2,None,Hyper équipée,None,Oui,None,4,Bon,None,None,1,1,None,None,Oui,None,1,3,None,1,None,1969,9316395,for sale,house,house,9230,346000,good
+140,204,4,None,Équipée,None,Oui,None,2,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9267032,for sale,house,house,9230,300000,None
+None,354,5,None,Équipée,None,Oui,None,None,À rafraîchir,None,None,3,1,Non,None,Non,None,1,None,None,None,None,None,9166901,for sale,house,house,9230,479000,to be done up
+576,675,6,Non,Hyper équipée,None,None,None,4,Excellent état,None,None,4,1,None,None,None,None,None,None,None,None,None,None,9051894,for sale,house,house,9230,950000,as new
+690,870,3,None,None,None,None,None,4,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,9311713,for sale,house,house,9230,530000,None
+None,1121,4,Non,Équipée,None,None,None,4,None,None,None,1,2,None,None,None,None,3,4,None,None,None,None,9273706,for sale,house,bungalow,9230,498000,None
+198,None,None,Non,None,None,None,None,3,None,None,None,None,None,Non,None,Non,Oui,None,None,None,None,None,2004,9188076,for sale,house,apartment block,9230,375000,None
+None,None,3,None,None,None,None,None,None,None,None,None,1,2,Non,None,Non,None,None,None,None,None,None,None,9313118,for sale,house,house,9230,328400,None
+138,300,5,Non,None,None,None,None,2,À rénover,None,None,1,None,None,None,None,Oui,3,None,None,None,None,None,9069307,for sale,house,house,9230,149000,to renovate
+None,346,4,None,Équipée,None,None,None,None,Excellent état,None,None,None,None,Non,None,Non,None,None,None,None,None,None,None,9315538,for sale,house,house,9230,399000,as new
+None,340,3,None,None,None,None,None,None,None,None,None,1,None,Non,None,Non,None,1,1,Oui,None,None,None,9278487,for sale,house,house,9230,448751,None
+None,None,3,None,None,None,Oui,None,None,None,None,None,1,2,Non,None,Non,None,None,None,None,None,None,None,9174389,for sale,house,house,9230,320000,None
+350,None,7,None,None,None,None,None,4,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,7921653,for sale,house,other property,9230,1250000,None
+364,7900,4,None,Équipée,None,None,None,4,Bon,1,None,2,3,None,Oui,Oui,Oui,None,None,Oui,None,None,2003,9226086,for sale,house,manor house,8600,795000,good
+176,155,3,Non,Hyper équipée,None,Oui,None,None,Excellent état,None,None,None,1,Non,Oui,None,None,None,None,None,None,None,None,9255211,for sale,house,house,8600,269000,as new
+225,325,3,Non,Équipée,1,Oui,None,None,Bon,None,None,None,2,Non,None,None,None,None,None,None,None,None,None,9088264,for sale,house,house,8600,209000,good
+285,136,3,Non,Semi-équipée,None,Oui,None,None,À rafraîchir,None,None,None,1,Non,Oui,None,None,None,None,None,None,None,None,8894429,for sale,house,house,8600,260000,to be done up

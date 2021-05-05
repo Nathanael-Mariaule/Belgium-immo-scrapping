@@ -67,7 +67,6 @@ class ImmoWebScrapping:
                 elements_for_xpath = wait.until(EC.presence_of_all_elements_located((By.XPATH, xpath)))
                 # elements_for_xpath = self.driver.find_elements_by_xpath(xpath)
                 elements += elements_for_xpath
-            print(len(elements), elements)
             for j in range(len(elements)):
                 elem = elements[j]
                 windows_before = self.driver.window_handles
@@ -82,7 +81,8 @@ class ImmoWebScrapping:
                 source_page = self.driver.page_source
                 self.driver.close()
                 self.driver.switch_to.window(self.driver.window_handles[0])
-                yield source_page
+                with open('data_immoweb.csv', 'a') as file:
+                    file.write(scrap_page(source_page))
             self.next_page(next_page_xpath)
             # self.change_page=True
             # self.number_page_scrapped += 1
@@ -93,7 +93,7 @@ class ImmoWebScrapping:
     def next_page(self, xpath):
         current_url = self.driver.current_url
         self.driver.maximize_window()
-        wait = WebDriverWait(self.driver, 60)
+        wait = WebDriverWait(self.driver, 30)
         elem = wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
         actions = ActionChains(self.driver)
         actions.click(elem)
@@ -122,11 +122,9 @@ if __name__=='__main__':
     def scrap_city(house_kind, city, postcode):
         url = "https://www.immoweb.be/fr/recherche/{}/a-vendre/{}/{}?countries=BE&orderBy=relevance".format(house_kind, city, postcode)
         my_scrapper.change_research(url)
-        for html_page in my_scrapper.scrap_page(xpaths, next_page_xpath):
-            with open('data_immoweb.csv', 'a') as file:
-                my_soup = BeautifulSoup(html_page, features="html.parser")
-                print(my_soup.find('a').string)
-                file.write(scrap_page(html_page))
+        my_scrapper.get_number_pages(last_entry_location)
+        my_scrapper.scrap_page(xpaths, next_page_xpath)
+
 
 
     arguments = ["Surface habitable", 'Surface du terrain', 'Chambres', 'Meublé', 'Type de cuisine',
@@ -169,5 +167,8 @@ if __name__=='__main__':
                     print('error with ', city)
                     continue
                 print(city, ' done')
+
+
+
 
 
