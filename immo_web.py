@@ -1,17 +1,20 @@
 def b_soup_immo_web(html):
     soup = BeautifulSoup(html,'lxml')
     json = soup.find_all("script")
-    #print(json[2].string)
-    start, end = find_brackets(json[2].string)
-    json_clean = (json[2].string)[start:end+1]
-    #print(json_clean)
-    #json_object = js.dumps(json_clean)
+    for j in json:
+        print(j.string)
+        if j.string != None:
+            if "window.dataLayer" in j.string.split():
+                json = j
+                break
+    start, end = find_brackets(j.string)
+    json_clean = (j.string)[start:end+1]
     data = js.loads(json_clean)
     print(data)
-    adid, transaction_type, type_prop, subtype, zipcode = None, None, None, None, None
+    adid, transaction_type, type_prop, subtype, zipcode, price = None, None, None, None, None, None
     
-    variables= [adid, transaction_type, type_prop, subtype, zipcode]
-    mot_cle = ["id", "transactionType", "type", "subtype", "zip"]
+    variables= [adid, transaction_type, type_prop, subtype, zipcode, price]
+    mot_cle = ["id", "transactionType", "type", "subtype", "zip", "price"]
     
     for i in range(len(variables)):
         print(data["classified"][mot_cle[i]])
@@ -20,7 +23,6 @@ def b_soup_immo_web(html):
         except:
             print("Exception")
             variables[i] = None
-        print(variables[i])
     
     try:
         etat = data["classified"]["building"]["condition"]
