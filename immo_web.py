@@ -19,13 +19,28 @@ def return_one_page():
 if __name__=='__main__':
     html = return_one_page()
 
+
 def b_soup_immo_web(html):
     soup = BeautifulSoup(html,'lxml')
     json = soup.find_all("script")
-    print(json[2])
-    start, end = find_brackets(json[2])
-    json_clean = json[2][start:end+1]
-    print(json_clean)
+    #print(json[2].string)
+    start, end = find_brackets(json[2].string)
+    json_clean = (json[2].string)[start:end+1]
+    #print(json_clean)
+    #json_object = js.dumps(json_clean)
+    data = js.loads(json_clean)
+    print(data)
+    
+    adid = data["classified"]["id"]
+    transaction_type = data["classified"]["transactionType"]
+    type_prop = data["classified"]["type"]
+    subtype = data["classified"]["subtype"]
+    zipcode = data["classified"]["zip"]
+    etat = data["classified"]["building"]["condition"]
+    
+    
+    print(adid, bedrooms, price, transaction_type, subtype, zipcode, type_prop,
+    etat, garden, garden_surface)
     
     """headers = soup.find_all("th", {"class":"classified-table__header"})
     
@@ -46,9 +61,9 @@ def b_soup_immo_web(html):
             = header.find_next_sibling().text.strip()"""
         
         
-    print(facades, surface_habitable)
+    #print(facades, surface_habitable)
 
-def find_brackets(text){
+def find_brackets(text):
     index1, index2 = -1, -1
     
     for i, c in enumerate(text):
@@ -56,13 +71,13 @@ def find_brackets(text){
             index1 = i
             break
     
-    for i in range(len(text), 0, -1):
-          if text[i] == "}":
+    for i in range(len(text)-1, 0, -1):
+        if text[i] == "}":
             index2 = i
             break
     
     return index1, index2
-}
+
 """        
 adid, bedrooms, city, price, transaction_type, subtype, zipcode, adresse, surface, type_prop,
 etat, facades, surface_terrain, garden, garden_surface, terrasse, terrasse_surface, piscine,
