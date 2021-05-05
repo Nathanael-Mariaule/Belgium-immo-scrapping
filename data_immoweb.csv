@@ -1,0 +1,3 @@
+Surface habitable,Surface du terrain,Chambres,Meublé,Type de cuisine,Surface du jardin,Terrasse,Surface de la terrasse,Nombre de façades,État du bâtiment,Combien de feux ouverts ?,Piscine,Salles de bains,Toilettes,Dressing,Cave,Bureau,Salon,Parkings intérieurs,Parkings extérieurs,Salle à manger,Salles de douche,Buanderie,Année de construction,id,transactionType,type,subtype,zip,price,état
+510,1061,4,Non,Semi-équipée,None,None,None,4,Bon,1,None,2,3,None,Oui,None,None,None,5,None,None,None,1991,9314233,for sale,house,house,9660,425000,good
+254,2330,4,Non,Équipée,None,None,25,2,None,1,None,2,None,None,Oui,None,None,4,2,None,None,None,2008,9243525,for sale,house,house,9660,649000,None

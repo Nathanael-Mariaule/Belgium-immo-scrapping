@@ -7,17 +7,31 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 import time
 from bs4 import BeautifulSoup
-
+import pickle
+import random
+import pandas as pd
+from immoweb_page_scrapping import scrap_page
 
 class ImmoWebScrapping:
-    def __init__(self, url):
+    def __init__(self, url, save_cookies=False):
         self.driver = webdriver.Chrome()
         self.pages_to_scrap = []
         self.last = 0
         self.number_page_scrapped = 0
         self.driver.get(url)
+        time.sleep(5)
+        if not save_cookies:
+            cookies = pickle.load(open("cookies_immoweb.pkl", "rb"))
+            for cookie in cookies:
+                self.driver.add_cookie(cookie)
+            self.driver.refresh()
+            print('cookies loaded')
         self.change_page = False
         time.sleep(10)
+        if save_cookies:
+            time.sleep(5)
+            pickle.dump(self.driver.get_cookies(), open("cookies_immoweb.pkl", "wb"))
+            print('cookies ready')
         self.driver.maximize_window()
         print('ready')
 
@@ -64,6 +78,7 @@ class ImmoWebScrapping:
                 actions.perform()
                 WebDriverWait(self.driver, 20).until(EC.new_window_is_opened(windows_before))
                 self.driver.switch_to.window(self.driver.window_handles[1])
+                time.sleep(2 * random.random())
                 source_page = self.driver.page_source
                 self.driver.close()
                 self.driver.switch_to.window(self.driver.window_handles[0])
@@ -94,16 +109,41 @@ class ImmoWebScrapping:
     def research_completed(self):
         return self.number_page_scrapped == self.last
 
+    def change_research(self, url):
+        print('changing research')
+        self.driver.get(url)
+        time.sleep(5)
+
     def close(self):
         self.driver.quit()
 
 if __name__=='__main__':
-    with open('data.csv', 'w') as file:
-     file.write("adid, bedrooms, city, price, transaction_type, subtype, "
-               "zipcode, adresse, surface, type_prop, etat, facades, surface_terrain, garden, "
-               "garden_surface, terrasse, terrasse_surface, piscine, nombre_chambres, garage, surface_habitable, "
-               "meuble, salles_de_bain, toilettes, cuisine_equipee, cheminee\n")
 
+    def scrap_city(house_kind, city, postcode):
+        url = "https://www.immoweb.be/fr/recherche/{}/a-vendre/{}/{}?countries=BE&orderBy=relevance".format(house_kind, city, postcode)
+        my_scrapper.change_research(url)
+        for html_page in my_scrapper.scrap_page(xpaths, next_page_xpath):
+            with open('data_immoweb.csv', 'a') as file:
+                my_soup = BeautifulSoup(html_page, features="html.parser")
+                print(my_soup.find('a').string)
+                file.write(scrap_page(html_page))
+
+
+    arguments = ["Surface habitable", 'Surface du terrain', 'Chambres', 'Meublé', 'Type de cuisine',
+                 'Surface du jardin', 'Terrasse', 'Surface de la terrasse', 'Nombre de façades',
+                 'État du bâtiment', 'Combien de feux ouverts ?', 'Piscine', 'Salles de bains', 'Toilettes', 'Dressing',
+                 'Cave', 'Bureau', "Salon", 'Parkings intérieurs',
+                 'Parkings extérieurs', 'Salle à manger', 'Salles de douche', 'Buanderie', 'Année de construction']
+    mot_cle = ["id", "transactionType", "type", "subtype", "zip", 'price']
+    first_csv_line = ""
+    for arg in arguments:
+        first_csv_line += arg+','
+    for mot in mot_cle:
+        first_csv_line += mot + ','
+    first_csv_line+='état\n'
+
+    with open('data_immoweb.csv', 'w') as file:
+        file.write(first_csv_line)
     my_scrapper = ImmoWebScrapping(
         'https://www.immoweb.be/fr/recherche/maison-et-appartement/a-vendre?countries=BE&page=1&orderBy=relevance')
     path_to_research_field = '//input[@placeholder="Entrez une ville ou un code postal"]'
@@ -114,11 +154,20 @@ if __name__=='__main__':
     last_entry_location = ('span', {'class': 'button__label'})
     next_page_xpath = "//a[@class='pagination__link pagination__link--next button button--text button--size-small']"
     my_scrapper.get_number_pages(last_entry_location)
+
+    housing_types = ['maison', 'appartement']
+    cities_data = pd.read_csv("post_codes.csv", sep=';')
+    cities = list(cities_data.iloc[:, 1].str.lower()[::-1])
+    postcodes = list(cities_data.iloc[:, 0].astype(str)[::-1])
+
     while True:
-        for html_page in my_scrapper.scrap_page(xpaths, next_page_xpath):
-            with open('data.csv', 'a') as file:
-                my_soup = BeautifulSoup(html_page, features="html.parser")
-                #b_soup_immo(html_page)
-                file.write(my_soup.find('title').string)
+        for housing_type in housing_types:
+            for city, postcode in zip(cities, postcodes):
+                try:
+                    scrap_city(housing_type, city, postcode)
+                except:
+                    print('error with ', city)
+                    continue
+                print(city, ' done')
 
 

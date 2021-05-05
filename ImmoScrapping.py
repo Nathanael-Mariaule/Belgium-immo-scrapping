@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -45,7 +44,6 @@ class ImmoScrapping:
                 elements_for_xpath = wait.until(EC.presence_of_all_elements_located((By.XPATH, xpath)))
                 #elements_for_xpath = self.driver.find_elements_by_xpath(xpath)
                 elements += elements_for_xpath
-            print(len(elements), elements)
             for j in range(len(elements)):
                 elem = elements[j]
                 windows_before = self.driver.window_handles
