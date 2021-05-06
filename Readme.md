@@ -6,7 +6,7 @@ _Authors: Nathanaël Mariaule, Han Le, Jérémy Lipszyc_
 
 In the context of Becode's AI training, we were asked to build a database containing various information on houses for sale.
 This program scans two websites (ImmoVlan and ImmoWeb) for houses for sale and retrieves the data on the single page of each house.
-The retrieved data is stored in two files in csv format named "data_immoweb.csv" and "data_immovlan.csv".
+The retrieved data is stored in data.csv .
 
 ## 2/ The files
 
