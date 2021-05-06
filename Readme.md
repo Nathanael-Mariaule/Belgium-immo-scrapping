@@ -35,29 +35,29 @@ arse the html code of a page and retrieve the desired data (see next point for m
 ## 3/ Attributes in data.csv
 They are 26 columns in data.csv:
 
-*adid*: Id on the website.
-*bedrooms*: Number of bedrooms.
-*Locality*: Name of the area.
-*price*: Price.
-*transaction_type*: Type of sale (Exclusion of life sales).
-*type_prop*: Type of the property (house, appartment).
-*subtype*: Subtype of the property (villa, bungalow).
-*zipcode*: Zipcode.
-*adress*: Adress of the house.
-*surface*: Surface of the land.
-*state*: State of the building (New, to be renovated, ...).
-*facades*: Number of facades.
-*surface_land*: Surface area of the plot of land.
-*garden*: Garden (1 for yes, 0 for no).
-*garden_surface*: Surface area of the garden.
-*terrace*: Terrace (1 for yes, 0 for no).
-*terrace_surface*: Surface area of the terrace.
-*swimming_pool*: Swimming pool (1 for yes, 0 for no).
-*number_rooms*: Number of rooms.
-*garage*: Garage (1 for yes, 0 for no).
-*surface_living*: Surface area of the building.
-*furnished*: Furnished (1 for yes, 0 for no).
-*bathrooms*: Number of bathrooms.
-*toilets*: Number of toilets.
-*equipped_kitchen*: Fully equipped kitchen (1 for yes, 0 for no).
-*open_fire*: Open fire (1 for yes, 0 for no).
+1. *adid*: Id on the website.
+2. *bedrooms*: Number of bedrooms.
+3. *Locality*: Name of the area.
+4. *price*: Price.
+5. *transaction_type*: Type of sale (Exclusion of life sales).
+6. *type_prop*: Type of the property (house, appartment).
+7. *subtype*: Subtype of the property (villa, bungalow).
+8. *zipcode*: Zipcode.
+9. *adress*: Adress of the house.
+10. *surface*: Surface of the land.
+11. *state*: State of the building (New, to be renovated, ...).
+12. *facades*: Number of facades.
+13. *surface_land*: Surface area of the plot of land.
+14. *garden*: Garden (1 for yes, 0 for no).
+15. *garden_surface*: Surface area of the garden.
+16. *terrace*: Terrace (1 for yes, 0 for no).
+17. *terrace_surface*: Surface area of the terrace.
+18. *swimming_pool*: Swimming pool (1 for yes, 0 for no).
+19. *number_rooms*: Number of rooms.
+20. *garage*: Garage (1 for yes, 0 for no).
+21. *surface_living*: Surface area of the building.
+22. *furnished*: Furnished (1 for yes, 0 for no).
+23. *bathrooms*: Number of bathrooms.
+24. *toilets*: Number of toilets.
+25. *equipped_kitchen*: Fully equipped kitchen (1 for yes, 0 for no).
+26. *open_fire*: Open fire (1 for yes, 0 for no).
