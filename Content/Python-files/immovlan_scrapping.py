@@ -1,25 +1,29 @@
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.webdriver import ActionChains
-from selenium.webdriver.common.keys import Keys
-import time
 from bs4 import BeautifulSoup
-from page_scrapping import b_soup_immo
-from selenium.webdriver.chrome.options import Options
 from fake_useragent import UserAgent
+from immovlan_page_scrapping import scrap_page
 import pickle
 import random
+from selenium import webdriver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+
 
 class ImmoVlanScrapping:
+    """"
+            Class that scrap a page of immovlan using Selenium
+            The class is not able to deal with captcha and has little
+        """
     def __init__(self, url, save_cookies=False):
         options = Options()
         ua = UserAgent()
         options.add_argument(f'user-agent={ua}')
         userAgent = ua.random
         self.driver = webdriver.Chrome(chrome_options=options)
-        #self.driver = webdriver.Chrome()
         self.pages_to_scrap = []
         self.last = 167
         self.number_page_scrapped = 0
@@ -78,8 +82,7 @@ class ImmoVlanScrapping:
                 self.driver.switch_to.window(self.driver.window_handles[0])
                 yield source_page
             self.next_page(next_page_xpath)
-            #self.change_page=True
-            #self.number_page_scrapped += 1
+
 
     def list_complete(self):
         return self.change_page
@@ -91,10 +94,6 @@ class ImmoVlanScrapping:
         actions.click(elem)
         actions.perform()
         time.sleep(10)
-        #elem = self.driver.find_element_by_xpath(xpath)
-        #actions = ActionChains(self.driver)
-        #actions.click(elem)
-        #actions.perform()
         WebDriverWait(self.driver, 15).until(EC.url_changes(current_url))
         self.change_page=False
 
@@ -144,15 +143,6 @@ class ImmoVlanScrapping:
             self.driver.switch_to.window(self.driver.window_handles[0])
             yield source_page
         self.next_page(next_page_xpath)
-        # self.change_page=True
-        # self.number_page_scrapped += 1
-
-
-
-
-
-
-
 
 
 if __name__=='__main__':
@@ -166,14 +156,11 @@ if __name__=='__main__':
 
     path_to_research_field = "//input[@placeholder='Où ? Ville, Code Postal, Province ou Région.']"
     input_sentence = '8000'
-    #my_scrapper.start_research(path_to_research_field, input_sentence)
     xpaths_flat = "//h2[@class='card-title text-ellipsis mb-1 d-inline with-small-icon appartment']"
     xpath_house = "//h2[@class='card-title text-ellipsis mb-1 d-inline with-small-icon house']"
     xpaths =[xpaths_flat, xpath_house]
     last_entry_location = ('a', {'rel': 'nofollow'})
     next_page_xpath = "//i[@class='fa fa-angle-right']"
-    #print('compute number of page')
-    #my_scrapper.get_number_pages(last_entry_location)
     my_scrapper = ImmoVlanScrapping("https://immo.vlan.be/fr", False)
     my_scrapper.close()
     for i in range(10, 168):
@@ -186,7 +173,7 @@ if __name__=='__main__':
             for html_page in scrapper.scrap_page([xpaths[index]], next_page_xpath):
                 try:
                     with open('data_vlan.csv', 'a') as file:
-                        file.write(b_soup_immo(html_page) + "\n")
+                        file.write(scrap_page(html_page) + "\n")
                 except:
                     continue
             scrapper.close()

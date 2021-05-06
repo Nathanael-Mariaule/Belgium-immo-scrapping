@@ -1,70 +1,68 @@
 from bs4 import BeautifulSoup
 
-
-def b_soup_immo(html):
+def scrap_page(html):
     soup = BeautifulSoup(html, "html.parser")
-
-    adid = soup.find("div", {"class": "classified__information--immoweb-code"})
+    adid = soup.find("meta", {"name": "cXenseParse:rob-immo-property-adid"})
     if adid != None:
-        adid = adid.get("content").split(" ")[-1]
+        adid = adid.get("content")
     else:
         adid = None
-
+        
     bedrooms = soup.find("meta", {"name": "cXenseParse:rob-immo-property-bedrooms"})
-    if bedrooms != None:
+    if bedrooms!= None:
         bedrooms = bedrooms.get("content")
     else:
         bedrooms = None
-
+        
     city = soup.find("meta", {"name": "cXenseParse:rob-immo-property-city"})
     if city != None:
         city = city.get("content")
     else:
         city = None
-
+        
     price = soup.find("meta", {"name": "cXenseParse:rob-immo-property-price"})
     if price != None:
         price = price.get("content")
     else:
         price = None
-
+        
     transaction_type = soup.find("meta", {"name": "cXenseParse:rob-immo-transaction-type"})
     if transaction_type != None:
         transaction_type = transaction_type.get("content")
     else:
         transaction_type = None
-
+    
     type_prop = soup.find("meta", {"name": "cXenseParse:rob-immo-property-type"})
-    if type_prop != None:
+    if type_prop!= None:
         type_prop = type_prop.get("content")
     else:
         type_prop = None
-
+    
     subtype = soup.find("meta", {"name": "cXenseParse:rob-immo-property-subtype"})
-    if subtype != None:
+    if subtype!= None:
         subtype = subtype.get("content")
     else:
         subtype = None
-
+        
     zipcode = soup.find("meta", {"name": "cXenseParse:rob-immo-property-zipcode"})
     if zipcode != None:
         zipcode = zipcode.get("content")
     else:
         zipcode = None
-
+        
     adresse = soup.find("span", {"class": "address-line"})
     if adresse != None:
         adresse = adresse.text
     else:
         adresse = None
-
+        
     surface = soup.find("div", {"title": "Surface habitable"})
-    if surface != None:
-        surface = surface.find("div", {"class": "fs-4"}).text[:-3]
+    if surface!= None:
+        surface = surface.find("div", {"class":"fs-4"}).text[:-3]
     else:
         surface = None
-
-    general = soup.find("div", {"id": "collapse_equipment_details"})
+    
+    general = soup.find("div", {"id":"collapse_equipment_details"})
     etat = None
     if general != None:
         for element in general:
@@ -74,8 +72,8 @@ def b_soup_immo(html):
                     etat = element.find_next_sibling().text.strip()
             except AttributeError:
                 pass
-
-    exterieur = soup.find("div", {"id": "collapse_outdoor_details"}).find_all("div")
+            
+    exterieur = soup.find("div", {"id":"collapse_outdoor_details"}).find_all("div")
     facades, surface_terrain, garden, garden_surface, terrasse, terrasse_surface, piscine = None, None, None, None, None, None, None
     for element in exterieur:
         text = element.text.strip()
@@ -106,7 +104,8 @@ def b_soup_immo(html):
             else:
                 piscine == 0
 
-    interieur = soup.find("div", {"id": "collapse_indoor_details"}).find_all("div")
+            
+    interieur = soup.find("div", {"id":"collapse_indoor_details"}).find_all("div")
     nombre_chambres, garage, surface_habitable, meuble = None, None, None, None
     for element in interieur:
         text = element.text.strip()
@@ -126,8 +125,8 @@ def b_soup_immo(html):
                 meuble == 1
             else:
                 meuble == 0
-
-    sanitaires = soup.find("div", {"id": "collapse_kitchenbath_details"})
+    
+    sanitaires = soup.find("div", {"id":"collapse_kitchenbath_details"})
     salles_de_bain, toilettes, cuisine_equipee = None, None, None
     if sanitaires != None:
         sanitaires = sanitaires.find_all("div")
@@ -143,8 +142,8 @@ def b_soup_immo(html):
                     cuisine_equipee == 1
                 else:
                     cuisine_equipee == 0
-
-    equipments = soup.find("div", {"id": "collapse_equipment_details"})
+    
+    equipments = soup.find("div", {"id":"collapse_equipment_details"})
     cheminee = None
     if equipments != None:
         equipments = equipments.find_all("div")
@@ -156,25 +155,11 @@ def b_soup_immo(html):
                     cheminee == 1
                 else:
                     cheminee == 0
-
-    return "{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}".format(adid, bedrooms, city,
-                                                                                                  price,
-                                                                                                  transaction_type,
-                                                                                                  subtype, zipcode,
-                                                                                                  adresse, surface,
-                                                                                                  type_prop, etat,
-                                                                                                  facades,
-                                                                                                  surface_terrain,
-                                                                                                  garden,
-                                                                                                  garden_surface,
-                                                                                                  terrasse,
-                                                                                                  terrasse_surface,
-                                                                                                  piscine,
-                                                                                                  nombre_chambres,
-                                                                                                  garage,
-                                                                                                  surface_habitable,
-                                                                                                  meuble,
-                                                                                                  salles_de_bain,
-                                                                                                  toilettes,
-                                                                                                  cuisine_equipee,
-                                                                                                  cheminee)
+            
+    
+    return "{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}".format(adid, bedrooms, city, price, transaction_type,
+     subtype, zipcode, adresse, surface, type_prop, etat,
+     facades, surface_terrain, garden, garden_surface, terrasse, terrasse_surface, piscine,
+     nombre_chambres, garage, surface_habitable, meuble,
+     salles_de_bain, toilettes, cuisine_equipee, cheminee)
+    
