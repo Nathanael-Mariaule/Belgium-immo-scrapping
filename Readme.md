@@ -1,6 +1,6 @@
 # Challenge-collecting-data
 
-_Authors: Nathanaël Mariaule, Han Le, Jérémy Lipszyc_**
+_Authors: Nathanaël Mariaule, Han Le, Jérémy Lipszyc_
 
 ## 1/ The project
 
