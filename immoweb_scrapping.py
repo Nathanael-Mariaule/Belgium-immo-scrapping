@@ -54,9 +54,12 @@ class ImmoWebScrapping:
         WebDriverWait(self.driver, 15).until(EC.url_changes(current_url))
 
     def get_number_pages(self, last_entry_location):
-        my_soup = BeautifulSoup(self.driver.page_source, features="html.parser")
-        links = my_soup.find_all(last_entry_location[0], last_entry_location[1])
-        self.last = int(links[-1].get_text())
+        try:
+            my_soup = BeautifulSoup(self.driver.page_source, features="html.parser")
+            links = my_soup.find_all(last_entry_location[0], last_entry_location[1])
+            self.last = int(links[-1].get_text())
+        except:
+            self.last = 1
 
     def scrap_page(self, xpaths, next_page_xpath):
         for i in range(self.last):
@@ -119,11 +122,8 @@ class ImmoWebScrapping:
 
 if __name__=='__main__':
 
-    def scrap_city(house_kind, city, postcode):
-        url = "https://www.immoweb.be/fr/recherche/{}/a-vendre/{}/{}?countries=BE&orderBy=relevance".format(house_kind, city, postcode)
-        my_scrapper.change_research(url)
-        my_scrapper.get_number_pages(last_entry_location)
-        my_scrapper.scrap_page(xpaths, next_page_xpath)
+
+
 
 
 
@@ -140,8 +140,8 @@ if __name__=='__main__':
         first_csv_line += mot + ','
     first_csv_line+='état\n'
 
-    with open('data_immoweb.csv', 'w') as file:
-        file.write(first_csv_line)
+    #with open('data_immoweb.csv', 'w') as file:
+    #    file.write(first_csv_line)
     my_scrapper = ImmoWebScrapping(
         'https://www.immoweb.be/fr/recherche/maison-et-appartement/a-vendre?countries=BE&page=1&orderBy=relevance')
     path_to_research_field = '//input[@placeholder="Entrez une ville ou un code postal"]'
@@ -153,16 +153,21 @@ if __name__=='__main__':
     next_page_xpath = "//a[@class='pagination__link pagination__link--next button button--text button--size-small']"
     my_scrapper.get_number_pages(last_entry_location)
 
-    housing_types = ['maison', 'appartement']
+    housing_types = ['appartement', 'maison']
     cities_data = pd.read_csv("post_codes.csv", sep=';')
-    cities = list(cities_data.iloc[:, 1].str.lower()[::-1])
-    postcodes = list(cities_data.iloc[:, 0].astype(str)[::-1])
-
+    cities = list(cities_data.iloc[17:, 1].str.lower())
+    postcodes = list(cities_data.iloc[76:, 0].astype(str))
     while True:
-        for housing_type in housing_types:
-            for city, postcode in zip(cities, postcodes):
+        for city, postcode in zip(cities, postcodes):
+            for housing_type in housing_types:
                 try:
-                    scrap_city(housing_type, city, postcode)
+                    url = "https://www.immoweb.be/fr/recherche/{}/a-vendre/{}/{}?countries=BE&orderBy=relevance".format(
+                        housing_type, city, postcode)
+                    my_scrapper.change_research(url)
+                    my_scrapper.get_number_pages(last_entry_location)
+                    if my_scrapper.last == '333':
+                        break
+                    my_scrapper.scrap_page(xpaths, next_page_xpath)
                 except:
                     print('error with ', city)
                     continue
