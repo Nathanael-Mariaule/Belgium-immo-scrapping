@@ -70,7 +70,7 @@ class ImmoWebScrapping:
     def scrap_page(self, xpaths, next_page_xpath):
         """
             Scrap through all results of the research in the page and save informations about each sale in a csv file
-            :param xpath: xpaths locations of the urls of the result on the current page
+            :param xpaths locations of the urls of the result on the current page
             :param next_page_xpath: xpath location of the button to the next page of result
         """
         for i in range(self.last):  #loop through all result pages
@@ -173,13 +173,17 @@ if __name__=='__main__':
                     housing_type, city, postcode)
                 my_scrapper.change_research(url)  #load the page of the research
                 my_scrapper.get_number_pages(last_entry_location) #get the number of pages in the result
-                if my_scrapper.last == '333':
+                if my_scrapper.last == 333:
                     break   #if number of page is 333 then there are no special result for this commune and we skip
                 my_scrapper.scrap_page(xpaths, next_page_xpath)  #scrap all sales for the research
             except:   #if an error occur we move to the next research
                 print('error with ', city)
                 continue
             print(city, ' done')
+
+
+
+
 
 
 
