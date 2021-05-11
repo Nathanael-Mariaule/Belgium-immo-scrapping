@@ -28,8 +28,14 @@ Parse the html code of a page and retrieve the desired data (see next point for 
 ### immoweb_scrapping.py
 Browse the ImmoWeb site and retrieve the html code of the unique pages for each house for sale.
 
+### immoweb_threading.py
+Multi-threading version of immoweb_scrapping.py
+
 ### immoweb_page_scrapping.py
-arse the html code of a page and retrieve the desired data (see next point for more details).
+Parse the html code of a page and retrieve the desired data (see next point for more details).
+
+### data_cleaner.py
+Clean the datas obtained with immoweb_scrapping.py using pandas
 
 
 ## 3/ Attributes in data.csv

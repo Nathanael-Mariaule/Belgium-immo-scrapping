@@ -10,7 +10,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.keys import Keys
+
 
 
 
@@ -25,31 +25,30 @@ class ImmoWebScrapping:
             driver: the webdriver.Chrome() browser
             last: contains the number of pages of the research, update it with the get_number_pages() method
     """
-    def __init__(self, url, save_cookies=False):
+    def __init__(self, url, filename, cookie_xpath=""):
         """
             create an object ImmoWebScrapping. It initializes the browser, open the page url and save or load cookies
             :param url: the url address of the page as string
-            :param save_cookies: bool it save cooke if True otherwise, it loads them
+            :param filename: name of the file where we save the csv lines
+            :param cookie_xpath: xpath of the 'accept cookie' button on the opening of the webdriver
             :return: None
         """
+        self.filename = filename
+        driver = webdriver.Chrome()
         self.driver = webdriver.Chrome()
         self.last = 0
         self.driver.get(url)
         time.sleep(5)
-        if not save_cookies:
-            #open the cookies and load the in the browser
-            cookies = pickle.load(open("cookies_immoweb.pkl", "rb"))
-            for cookie in cookies:
-                self.driver.add_cookie(cookie)
-            self.driver.refresh()
-            print('cookies loaded')
-        time.sleep(10)
-        if save_cookies:
-            # save the cookies in a file
-            time.sleep(5)
-            pickle.dump(self.driver.get_cookies(), open("cookies_immoweb.pkl", "wb"))
-            print('cookies ready')
         self.driver.maximize_window()
+        if cookie_xpath:
+            print('accepting cookies')
+            wait = WebDriverWait(self.driver, 60)  # launch exception if no result are found
+            element_for_cookie = wait.until(EC.presence_of_element_located((By.XPATH, cookie_xpath)))
+            actions = ActionChains(self.driver)
+            actions.move_to_element(element_for_cookie)
+            actions.click(element_for_cookie)
+            actions.perform()
+            time.sleep(5)
         print('ready')
 
     def get_number_pages(self, last_entry_location):
@@ -74,7 +73,6 @@ class ImmoWebScrapping:
             :param next_page_xpath: xpath location of the button to the next page of result
         """
         for i in range(self.last):  #loop through all result pages
-            print('scrapping page ', i + 1)
             elements = []
             for xpath in xpaths:  #get the positions of the urls to the result on the current page
                 wait = WebDriverWait(self.driver, 60)  #launch exception if no result are found
@@ -94,7 +92,7 @@ class ImmoWebScrapping:
                 source_page = self.driver.page_source  #get html code from the page
                 self.driver.close()
                 self.driver.switch_to.window(self.driver.window_handles[0]) #close the tab and return to the main one
-                with open('data_immoweb.csv', 'a') as file:
+                with open(self.filename, 'a') as file:
                     file.write(scrap_page(source_page))  #save infos in the csv file
             self.next_page(next_page_xpath)
 
@@ -121,7 +119,6 @@ class ImmoWebScrapping:
             :param url: url of the page
             :return: None
         """
-        print('changing research')
         self.driver.get(url)   #open the page
         time.sleep(5)
 
@@ -152,9 +149,11 @@ if __name__=='__main__':
 
     #open a page on immoweb
     my_scrapper = ImmoWebScrapping(
-        'https://www.immoweb.be/fr/recherche/maison-et-appartement/a-vendre?countries=BE&page=1&orderBy=relevance')
+        'https://www.immoweb.be/fr/recherche/maison-et-appartement/a-vendre?countries=BE&page=1&orderBy=relevance',
+        'data_immoweb.csv')
 
     #xpaths used in the algo
+    cookie_xpath = '//button[@class="uc-btn-new  uc-btn-accept"]'
     xpaths = ["//a[@class='card__title-link']"]
     last_entry_location = ('span', {'class': 'button__label'})
     next_page_xpath = "//a[@class='pagination__link pagination__link--next button button--text button--size-small']"
